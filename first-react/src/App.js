@@ -3,10 +3,20 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState(0);
+  let [value, setValue] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <header className="App-header">
+        {value}
+        <button
+          onClick={() => {
+            setValue(value + 1);
+          }}
+        >
+          Click Me
+        </button>
+      </header>
     </div>
   );
 }
