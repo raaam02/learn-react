@@ -1,0 +1,7 @@
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #020038;
+  border-radius: 5px;
+  padding: 10px;
+}

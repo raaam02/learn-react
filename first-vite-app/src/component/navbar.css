@@ -1,0 +1,12 @@
+nav {
+  background-color: #160044;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: #eee;
+  height: 40px;
+  list-style: none;
+}
