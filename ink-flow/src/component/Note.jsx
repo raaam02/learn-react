@@ -27,39 +27,42 @@ function Note() {
   return (
     <div className="w-full border border-slate-400 bg-zinc-700 rounded-lg flex flex-col justify-between overflow-hidden absolute z-[2]">
       <div>
-        <div className="w-full flex items-center pe-4">
-          <input
-            className="rounded-lg py-1 px-3 h-12 w-full bg-zinc-700 font-semibold focus:outline-none"
-            type="text"
-            placeholder="Title"
-          />
+        <form action="">
+          <div className="w-full flex items-center pe-4">
+            <input
+              className="rounded-lg py-1 px-3 h-12 w-full bg-zinc-700 font-semibold focus:outline-none"
+              type="text"
+              placeholder="Title"
+            />
 
-          <button
-            onClick={() => setIsNote(!isNote)}
-            className="px-2 h-7 rounded-md fa-lg hover:bg-red-500"
-          >
-            <i class="fa-solid fa-xmark" style={{ color: "#e8e0ff" }}></i>
-          </button>
-        </div>
-        <hr />
-        <textarea
-          ref={textAreaRef}
-          value={textAreaValue}
-          onChange={handleTextAreaChange}
-          className="resize-none rounded-lg py-2 px-3 h-full w-full bg-zinc-700 font-semibold focus:outline-none bg-transparent"
-          name=""
-          id=""
-          placeholder="type your note shere..."
-          rows={1}
-        ></textarea>
-        <div className="w-full flex justify-end px-3 pb-2">
-          <button
-            onClick={() => setIsNote(!isNote)}
-            className="px-2 h-7 rounded-md hover:bg-red-500"
-          >
-            Close
-          </button>
-        </div>
+            <button
+              onClick={() => setIsNote(!isNote)}
+              className="px-2 h-7 rounded-md fa-lg hover:bg-red-500"
+            >
+              <i class="fa-solid fa-xmark" style={{ color: "#e8e0ff" }}></i>
+            </button>
+          </div>
+          <hr />
+          <textarea
+            ref={textAreaRef}
+            value={textAreaValue}
+            onChange={handleTextAreaChange}
+            className="resize-none rounded-lg py-2 px-3 h-full w-full bg-zinc-700 text-sm focus:outline-none bg-transparent"
+            name=""
+            id=""
+            placeholder="type your note here..."
+            rows={1}
+          ></textarea>
+          <div className="w-full flex justify-end px-3 pb-2">
+            <button
+              onClick={() => setIsNote(!isNote)}
+              className="px-2 h-7 rounded-md hover:bg-green-500"
+              type="submit"
+            >
+              Save
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
