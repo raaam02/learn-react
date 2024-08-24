@@ -6,7 +6,7 @@ function NotesContainer() {
   return (
     <div className="">
       <Addnote />
-      <div className="m-14 w-100">
+      <div className="m-14 w-100 flex">
         <NoteCard />
         <NoteCard />
       </div>
