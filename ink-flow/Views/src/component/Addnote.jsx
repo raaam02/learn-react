@@ -1,9 +1,8 @@
-import React from "react";
-import { useState, useRef, useContext, useEffect } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 import Note from "./Note";
 import { isNoteContext } from "../context/context";
 
-function Inputnote() {
+function Addnote() {
   const noteRef = useRef();
 
   const [mouseOverOnTodo, setmouserOverOnTodo] = useState(false);
@@ -25,9 +24,8 @@ function Inputnote() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
   return (
-    <>
+    <div className="flex justify-center items-center md:p-5 lg:p-5">
       <isNoteContext.Provider value={{ isNote, setIsNote }}>
         <div className="lg:w-1/3 md:w-1/2 relative" ref={noteRef}>
           {isNote ? <Note /> : null}
@@ -58,8 +56,8 @@ function Inputnote() {
           </div>
         </div>
       </isNoteContext.Provider>
-    </>
+    </div>
   );
 }
 
-export default Inputnote;
+export default Addnote;
